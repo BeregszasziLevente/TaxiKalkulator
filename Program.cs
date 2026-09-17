@@ -34,6 +34,7 @@ Console.WriteLine("--------------------------------------");
 Console.WriteLine($"Utas neve: {nev}");
 Console.WriteLine($"Megtett távolság: {tav} km");
 Console.WriteLine($"Alapérték: {alapdij} Ft");
+Console.WriteLine($"Fizetendő végösszeg: {vegosszeg:f0}");
 Console.WriteLine($"Státusz: {status}");
 
 Console.WriteLine("--------------------------------------");
