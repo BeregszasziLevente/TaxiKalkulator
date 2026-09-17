@@ -16,8 +16,20 @@ int alapdij=int.Parse(Console.ReadLine());
 Console.Write("Kilóméterdíj: ");
 int kmdij=int.Parse(Console.ReadLine());
 
-double potlek = 1.0;
-if (esti) potlek = 1.2;
+Console.Write("Éjszakai pótlék szorzója: ");
+double potlek = Convert.ToDouble(Console.ReadLine());
 
-int alaposszeg = alapdij + (kmdij * kmdij);
+int alaposszeg = alapdij + (tav * kmdij);
+double vegosszeg = 0.0;
+string status = "Nem volt éjszakai pótlék felszámolva.";
 
+if (esti) { 
+    vegosszeg = alaposszeg * potlek;
+    status = "20% éjszakai pótlék felszámolva.";
+}
+else vegosszeg = alaposszeg;
+
+Console.WriteLine($"Utas neve: {nev}");
+Console.WriteLine($"Megtett távolság: {tav} km");
+Console.WriteLine($"Alapérték: {alapdij} Ft");
+Console.WriteLine($"Státusz: {status}");
